@@ -1,4 +1,4 @@
-[
+const Hotels = [
   {
     "name": "hotelone",
     "starRating": 5,
@@ -60,3 +60,5 @@
     "image_url": "https://static.laterooms.com/hotelphotos/laterooms/1055/gallery/britannia-hotel-city-centre-manchester-manchester_220120151124171017.jpg"
   }
 ]
+
+export default Hotels;

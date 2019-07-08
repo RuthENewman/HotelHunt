@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
       <form className="facilities-form">
         <div className="facilities-form__buttons">
           <div className="facilities-form__buttons--wifi">
             <label htmlFor="wifi">Free Wifi</label>
-            <input type="checkbox" className="input-button" id="wifi" value="wifi"></input>
+            <input type="checkbox"
+            className="input-button"
+            id="wifi"
+            value="wifi"
+            onClick={this.props.toggleWifiFilter}
+            ></input>
           </div>
           <div className="facilities-form__buttons--pool">
             <label htmlFor="pool">Swimming pool</label>
@@ -29,7 +38,11 @@ class Form extends Component {
             <label htmlFor="spa">Spa</label>
             <input type="checkbox" className="input-button" id="spa" value="spa"></input>
           </div>
-          <input id="submitButton" type="submit"></input>
+          <input
+          id="submitButton"
+          type="submit"
+          
+          ></input>
         </div>
       </form>
     )
