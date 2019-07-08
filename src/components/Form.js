@@ -4,30 +4,30 @@ class Form extends Component {
   render() {
     return (
       <form className="facilities-form">
-        <div class="facilities-form__buttons">
-          <div class="facilities-form__buttons--wifi">
-            <label for="wifi">Free Wifi</label>
-            <input type="checkbox" class="input-button" id="wifi" value="wifi"></input>
+        <div className="facilities-form__buttons">
+          <div className="facilities-form__buttons--wifi">
+            <label htmlFor="wifi">Free Wifi</label>
+            <input type="checkbox" className="input-button" id="wifi" value="wifi"></input>
           </div>
-          <div class="facilities-form__buttons--pool">
-            <label for="pool">Swimming pool</label>
-            <input type="checkbox" class="input-button" id="pool" value="pool"></input>
+          <div className="facilities-form__buttons--pool">
+            <label htmlFor="pool">Swimming pool</label>
+            <input type="checkbox" className="input-button" id="pool" value="pool"></input>
           </div>
-          <div class="facilities-form__buttons--carPark">
-            <label for="carPark">Car park</label>
-            <input type="checkbox" class="input-button" id="carPark" value="carPark"></input>
+          <div className="facilities-form__buttons--carPark">
+            <label htmlFor="carPark">Car park</label>
+            <input type="checkbox" className="input-button" id="carPark" value="carPark"></input>
           </div>
-          <div class="facilities-form__buttons--restaurant">
-            <label for="restaurant">Restaurant</label>
-            <input type="checkbox" class="input-button" id="restaurant" value="restaurant"></input>
+          <div className="facilities-form__buttons--restaurant">
+            <label htmlFor="restaurant">Restaurant</label>
+            <input type="checkbox" className="input-button" id="restaurant" value="restaurant"></input>
           </div>
-          <div class="facilities-form__buttons--gym">
-            <label for="gym">Gym</label>
-            <input type="checkbox" class="input-button" id="gym" value="gym"></input>
+          <div className="facilities-form__buttons--gym">
+            <label htmlFor="gym">Gym</label>
+            <input type="checkbox" className="input-button" id="gym" value="gym"></input>
           </div>
-          <div class="facilities-form__buttons--spa">
-            <label for="spa">Spa</label>
-            <input type="checkbox" class="input-button" id="spa" value="spa"></input>
+          <div className="facilities-form__buttons--spa">
+            <label htmlFor="spa">Spa</label>
+            <input type="checkbox" className="input-button" id="spa" value="spa"></input>
           </div>
           <input id="submitButton" type="submit"></input>
         </div>

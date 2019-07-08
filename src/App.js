@@ -22,6 +22,16 @@ class App extends Component {
     }
   }
 
+  const fetchHotels = () => {
+    fetch('./hotels.json')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          hotels: data;
+        })
+      })
+  }
+
   render() {
     return (
     <div className="App">
