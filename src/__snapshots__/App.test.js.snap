@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header component correctly 1`] = `
+<header
+  className="header"
+>
+  <h1
+    className="heading-main--large"
+  >
+    Hotel hunt
+  </h1>
+  <h2
+    className="heading-main--sub"
+  >
+    Find by facilities
+  </h2>
+</header>
+`;

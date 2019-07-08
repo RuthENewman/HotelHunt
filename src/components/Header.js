@@ -4,11 +4,11 @@ class Header extends Component {
 
   render() {
     return (
-      <header class="header">
-        <h1 class="heading-main--large">
+      <header className="header">
+        <h1 className="heading-main--large">
           Hotel hunt
         </h1>
-        <h2 class="heading-main--sub">
+        <h2 className="heading-main--sub">
           Find by facilities
         </h2>
     </header>
