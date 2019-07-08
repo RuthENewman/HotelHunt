@@ -15,7 +15,7 @@ class Form extends Component {
             className="input-button"
             id="wifi"
             value="wifi"
-            onClick={this.props.toggleWifiFilter}
+            onClick={(event) => this.props.toggleWifiFilter()}
             ></input>
           </div>
           <div className="facilities-form__buttons--pool">
@@ -41,7 +41,7 @@ class Form extends Component {
           <input
           id="submitButton"
           type="submit"
-          
+
           ></input>
         </div>
       </form>

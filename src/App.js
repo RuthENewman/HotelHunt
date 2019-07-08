@@ -37,15 +37,21 @@ class App extends Component {
 
   }
 
+  // toggleFilter = facility => {
+  //   this.setState({
+  //     filters[facility]: !this.state.filters[facility]
+  //     })
+  // }
+
   toggleWifiFilter() {
     this.setState({
-      wifi: !this.state.wifi
+      wifi: true
       })
   }
 
 
   render() {
-    let {hotels} = this.state;
+    let {hotels, filteredHotels} = this.state;
     return (
     <div className="App">
       <Header />
@@ -55,8 +61,8 @@ class App extends Component {
       wifi={this.state.wifi}
       />
       <Results
-      hotels={this.state.hotels}
-      filteredHotels={this.state.filteredHotels}
+      hotels={hotels}
+      filteredHotels={filteredHotels}
       />
     </div>
   );

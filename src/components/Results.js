@@ -13,6 +13,7 @@ class Results extends Component {
         {
           hotels.length > 0 ? hotels.map((hotel) => <Hotel
           hotel={hotel}
+          key={hotel.name}
           />
           ) : (<p>"Loading hotels..."</p>)
         }
