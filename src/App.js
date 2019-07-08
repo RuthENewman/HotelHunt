@@ -13,15 +13,19 @@ class App extends Component {
       hotels: [],
       filteredHotels: [],
       wifi: false,
-
-      filters: {
-        wifi: false,
-        pool: false,
-        restaurant: false,
-        carPark: false,
-        gym: false,
-        spa: false,
-      }
+      pool: false,
+      restaurant: false,
+      carPark: false,
+      gym: false,
+      spa: false
+      // filters: {
+      //   wifi: false,
+      //   pool: false,
+      //   restaurant: false,
+      //   carPark: false,
+      //   gym: false,
+      //   spa: false,
+      // }
     }
   }
 
@@ -31,21 +35,21 @@ class App extends Component {
         })
   }
 
+ toggleFilter = (facility) => {
+    this.setState({
+      [facility]: !this.state[facility]
+      })
+  }
+
 
   componentDidMount() {
     this.fetchHotels()
 
   }
 
-  // toggleFilter = facility => {
-  //   this.setState({
-  //     filters[facility]: !this.state.filters[facility]
-  //     })
-  // }
-
-  toggleWifiFilter() {
+  toggleWifiFilter = () => {
     this.setState({
-      wifi: true
+      wifi: !this.state.wifi
       })
   }
 
@@ -57,8 +61,10 @@ class App extends Component {
       <Header />
       <Form
       fetchHotels={this.fetchHotels}
+      toggleFilter={this.toggleFilter}
       toggleWifiFilter={this.toggleWifiFilter}
       wifi={this.state.wifi}
+      pool={this.state.pool}
       />
       <Results
       hotels={hotels}

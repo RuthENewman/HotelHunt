@@ -15,28 +15,52 @@ class Form extends Component {
             className="input-button"
             id="wifi"
             value="wifi"
-            onClick={(event) => this.props.toggleWifiFilter()}
+            onClick={() => this.props.toggleFilter("wifi")}
             ></input>
           </div>
           <div className="facilities-form__buttons--pool">
             <label htmlFor="pool">Swimming pool</label>
-            <input type="checkbox" className="input-button" id="pool" value="pool"></input>
+            <input type="checkbox"
+            className="input-button"
+            id="pool"
+            value="pool"
+            onClick={() => this.props.toggleFilter("pool")}
+            ></input>
           </div>
           <div className="facilities-form__buttons--carPark">
             <label htmlFor="carPark">Car park</label>
-            <input type="checkbox" className="input-button" id="carPark" value="carPark"></input>
+            <input type="checkbox" className="input-button"
+            id="carPark"
+            value="carPark"
+            onClick={() => this.props.toggleFilter("carPark")}
+            ></input>
           </div>
           <div className="facilities-form__buttons--restaurant">
             <label htmlFor="restaurant">Restaurant</label>
-            <input type="checkbox" className="input-button" id="restaurant" value="restaurant"></input>
+            <input type="checkbox"
+            className="input-button"
+            id="restaurant"
+            value="restaurant"
+            onClick={() => this.props.toggleFilter("restaurant")}
+            ></input>
           </div>
           <div className="facilities-form__buttons--gym">
             <label htmlFor="gym">Gym</label>
-            <input type="checkbox" className="input-button" id="gym" value="gym"></input>
+            <input type="checkbox"
+            className="input-button"
+            id="gym"
+            value="gym"
+            onClick={() => this.props.toggleFilter("gym")}
+            ></input>
           </div>
           <div className="facilities-form__buttons--spa">
             <label htmlFor="spa">Spa</label>
-            <input type="checkbox" className="input-button" id="spa" value="spa"></input>
+            <input type="checkbox"
+            className="input-button"
+            id="spa"
+            value="spa"
+            onClick={() => this.props.toggleFilter("spa")}
+            ></input>
           </div>
           <input
           id="submitButton"
