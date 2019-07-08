@@ -43,3 +43,60 @@ body {
   font-size: 3.1rem;
   letter-spacing: .5rem;
 }
+
+/* Form section */
+
+.facilities-form {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 1.8rem;
+  background-image: linear-gradient(to right bottom,
+    rgba(228,18,96, 1),
+    rgba(248,7,89, 1));
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.facilities-form__buttons {
+
+}
+
+[class^="facilities-form__buttons-"] {
+  display: inline-block;
+  padding: .8rem;
+  background-color: white;
+  border-radius: .3rem;
+  margin: 0 .5rem;
+}
+
+label {
+  margin-right: .2rem;
+  padding: 1rem;
+  color: #808080;
+}
+
+.input-button {
+  /* display: none; */
+}
+
+#submitButton {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  border: none;
+  color: white;
+  background-color: #bc4e9c;
+  margin-top: 1rem;
+}
+
+#submitButton:hover {
+  cursor: pointer;
+  width: 15rem;
+  opacity: .8;
+}
