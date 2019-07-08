@@ -9,8 +9,9 @@ class Hotel extends Component {
     return (
       <div className="hotel">
           <div class="hotel__details">
-            <h2 class="hotel__details--name">{hotel.name.slice(0,1).toUpperCase()}
-            {hotel.name.slice(1,5)}
+            <h2 class="hotel__details--name">
+            {hotel.name.slice(0,1).toUpperCase()}
+            {hotel.name.slice(1,5) + " "}
             {hotel.name.slice(5)}</h2>
             <h3 class="hotel__details--starRating">
               {hotel.starRating} stars

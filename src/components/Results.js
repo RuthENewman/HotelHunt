@@ -11,11 +11,10 @@ class Results extends Component {
     return (
       <div className="results">
         {
-          hotels.forEach((hotel) => {
-            return (<Hotel />
-
-            )
-          })
+          hotels.length > 0 ? hotels.map((hotel) => <Hotel
+          hotel={hotel}
+          />
+          ) : (<p>"Loading hotels..."</p>)
         }
       </div>
     )
