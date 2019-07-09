@@ -31,8 +31,6 @@ class App extends Component {
     this.setState({
       filteredHotels: []
     })
-    console.log("After running reset function")
-    console.log(this.state.filteredHotels)
   }
 
  toggleFilter = (facility) => {
