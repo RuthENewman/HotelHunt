@@ -7,7 +7,10 @@ class Form extends Component {
 
   render() {
     return (
-      <form className="facilities-form">
+      <form
+      className="facilities-form"
+      onSubmit={(event) => this.props.filterAll(event)}
+      >
         <div className="facilities-form__buttons">
           <div className="facilities-form__buttons--wifi">
             <label htmlFor="wifi">Free Wifi</label>
@@ -15,7 +18,7 @@ class Form extends Component {
             className="input-button"
             id="wifi"
             value="wifi"
-            onClick={() => this.props.toggleFilter("wifi")}
+            onChange={() => this.props.toggleFilter("wifi")}
             ></input>
           </div>
           <div className="facilities-form__buttons--pool">
@@ -24,7 +27,7 @@ class Form extends Component {
             className="input-button"
             id="pool"
             value="pool"
-            onClick={() => this.props.toggleFilter("pool")}
+            onChange={() => this.props.toggleFilter("pool")}
             ></input>
           </div>
           <div className="facilities-form__buttons--carPark">
@@ -32,7 +35,7 @@ class Form extends Component {
             <input type="checkbox" className="input-button"
             id="carPark"
             value="carPark"
-            onClick={() => this.props.toggleFilter("carPark")}
+            onChange={() => this.props.toggleFilter("carPark")}
             ></input>
           </div>
           <div className="facilities-form__buttons--restaurant">
@@ -41,7 +44,7 @@ class Form extends Component {
             className="input-button"
             id="restaurant"
             value="restaurant"
-            onClick={() => this.props.toggleFilter("restaurant")}
+            onChange={() => this.props.toggleFilter("restaurant")}
             ></input>
           </div>
           <div className="facilities-form__buttons--gym">
@@ -50,7 +53,7 @@ class Form extends Component {
             className="input-button"
             id="gym"
             value="gym"
-            onClick={() => this.props.toggleFilter("gym")}
+            onChange={() => this.props.toggleFilter("gym")}
             ></input>
           </div>
           <div className="facilities-form__buttons--spa">
@@ -59,13 +62,12 @@ class Form extends Component {
             className="input-button"
             id="spa"
             value="spa"
-            onClick={() => this.props.toggleFilter("spa")}
+            onChange={() => this.props.toggleFilter("spa")}
             ></input>
           </div>
           <input
           id="submitButton"
           type="submit"
-
           ></input>
         </div>
       </form>

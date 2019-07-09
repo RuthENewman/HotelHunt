@@ -17,22 +17,22 @@ class App extends Component {
       restaurant: false,
       carPark: false,
       gym: false,
-      spa: false
-      // filters: {
-      //   wifi: false,
-      //   pool: false,
-      //   restaurant: false,
-      //   carPark: false,
-      //   gym: false,
-      //   spa: false,
-      // }
+      spa: false,
     }
   }
 
   fetchHotels() {
-        this.setState({
-          hotels: Hotels
-        })
+    this.setState({
+        hotels: Hotels
+      })
+  }
+
+  resetFilteredHotels() {
+    this.setState({
+      filteredHotels: []
+    })
+    console.log("After running reset function")
+    console.log(this.state.filteredHotels)
   }
 
  toggleFilter = (facility) => {
@@ -41,18 +41,33 @@ class App extends Component {
       })
   }
 
+  filterByFacility = (facility) => {
+     this.state.filteredHotels.length > 0
+     ? this.setState({
+         filteredHotels: this.state.filteredHotels.filter((hotel) => hotel.facilities.includes(facility))
+       })
+       : this.setState({
+         filteredHotels: this.state.hotels.filter((hotel) => hotel.facilities.includes(facility))
+       });
+ }
+
+  filterAll = (event) => {
+     event.preventDefault();
+     this.resetFilteredHotels();
+      this.resetFilteredHotels();
+     for(let facility in this.state) {
+       if (this.state[facility] === true && facility !== 'carPark') {
+         this.filterByFacility(facility);
+       } else if (this.state[facility] === true && facility === 'carPark') {
+         this.filterByFacility("car park");
+       }
+     }
+ }
 
   componentDidMount() {
     this.fetchHotels()
 
   }
-
-  toggleWifiFilter = () => {
-    this.setState({
-      wifi: !this.state.wifi
-      })
-  }
-
 
   render() {
     let {hotels, filteredHotels} = this.state;
@@ -62,13 +77,14 @@ class App extends Component {
       <Form
       fetchHotels={this.fetchHotels}
       toggleFilter={this.toggleFilter}
-      toggleWifiFilter={this.toggleWifiFilter}
-      wifi={this.state.wifi}
-      pool={this.state.pool}
+      filterAll={this.filterAll}
+      resetFilteredHotels={this.resetFilteredHotels}
       />
       <Results
       hotels={hotels}
       filteredHotels={filteredHotels}
+      filterAll={this.filterAll}
+      resetFilteredHotels={this.resetFilteredHotels}
       />
     </div>
   );

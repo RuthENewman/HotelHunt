@@ -6,16 +6,25 @@ class Results extends Component {
     super(props)
   }
 
+  componentDidUpdate() {
+
+  }
+
   render() {
     let {hotels, filteredHotels} = this.props;
     return (
       <div className="results">
         {
-          hotels.length > 0 ? hotels.map((hotel) => <Hotel
+          filteredHotels.length > 0 ? filteredHotels.map((hotel) =>
+          <Hotel
           hotel={hotel}
           key={hotel.name}
           />
-          ) : (<p>"Loading hotels..."</p>)
+          ) : hotels.map((hotel) => <Hotel
+          hotel={hotel}
+          key={hotel.name}
+          />
+        )
         }
       </div>
     )

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { fetchHotels } from './App';
+import App,  { hotels } from './App';
 import ReactShallowRenderer from 'react-test-renderer/shallow';
 import Header from './components/Header';
 
@@ -17,7 +16,7 @@ test('should render Header component correctly', () => {
    expect(renderer.getRenderOutput()).toMatchSnapshot();
 });
 
-// test('should fetch all hotels', () => {
-//    const result = fetchHotels()
-//    expect(this.state.hotels.length).toBe(10);
-// });
+test('should fetch all hotels', () => {
+    const result = hotels;
+   expect(result.hotels.length).toBe(10);
+});
