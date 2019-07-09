@@ -52,7 +52,6 @@ class App extends Component {
   filterAll = (event) => {
      event.preventDefault();
      this.resetFilteredHotels();
-      this.resetFilteredHotels();
      for(let facility in this.state) {
        if (this.state[facility] === true && facility !== 'carPark') {
          this.filterByFacility(facility);
